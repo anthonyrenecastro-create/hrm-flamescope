@@ -1,0 +1,8 @@
+{
+  "name": "HRM FlameScope — Microgravity Combustion Intelligence",
+  "description": "Microgravity combustion intelligence and fire-safety research platform adapted from the HRM 4.0/4.1 Planetary Manifold Telemetry architecture. Ingests measured NASA FLEX data (NASA/TP-2015-216046) with provenance, compares an HRM graph model against independent baselines on held-out tests, ranks findings transparently, and answers questions only from cited evidence. Built for the NASA Space Apps Challenge 2026 (Flame in Freefall) by Axiom Zeta Innovations LLC. Not endorsed by NASA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
