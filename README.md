@@ -4,6 +4,7 @@
 **Built for:** NASA Space Apps Challenge 2026 — *Flame in Freefall*
 **Architecture:** adapted from HRM 4.0/4.1 Planetary Manifold Telemetry (preserved in-app as Planetary mode)
 **Status:** independent project. **Not endorsed by NASA.** The HRM model is unvalidated — see [LIMITATIONS.md](LIMITATIONS.md).
+**Live:** https://hrm-flamescope-seven.vercel.app (Vercel, static build; the Express API routes are local-dev only, so the assistant runs in offline evidence mode there).
 
 FlameScope organizes real NASA microgravity combustion measurements into a
 single research environment: provenance-preserving ingestion, an experiment

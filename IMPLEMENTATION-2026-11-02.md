@@ -78,3 +78,26 @@ Gravity comparison is INCONCLUSIVE by design (no bundled 1-g set).
    path live (code-verified, never exercised with a real key here).
 4. Future data work: BASS/ACME/CFI-G machine-readable ingestion from
    PSI, and a matched normal-gravity set to un-block §6C comparisons.
+
+## Deployment record (2026-11-02)
+
+- GitHub: pushed to `anthonyrenecastro-create/hrm-flamescope` main @
+  `90322ece18ad6541db9caf09a2271f25f2beb9b7` via the GitHub API push
+  path (throwaway-branch proof first, deleted after). Remote content
+  byte-verified against local for index.html, package.json,
+  FlameScopeApp.tsx, and the FLEX CSV; 63 blobs total (61 pushed +
+  LICENSE + original ZIP retained).
+- Vercel: project `transcendental-gateways/hrm-flamescope` (already
+  present in the team and Git-connected; the API create returned 403
+  as in prior projects, and a duplicate create was correctly refused).
+  Production deployment Ready at commit 90322ec.
+- Live URL: **https://hrm-flamescope-seven.vercel.app** — verified
+  independently: HTTP 200, text/html, title "HRM FlameScope —
+  Microgravity Combustion Intelligence", JS bundle 464,286 bytes
+  matching the local build, containing the FLEX dataset markers.
+  The bare `hrm-flamescope.vercel.app` subdomain returns 404 (held by
+  another account), hence the `-seven` suffix.
+- Scope note: Vercel serves the static Vite build. The Express
+  `server.ts` APIs (telemetry proxy, Gemini phrasing) do not run
+  there; the assistant uses its offline evidence mode on Vercel,
+  by design.
