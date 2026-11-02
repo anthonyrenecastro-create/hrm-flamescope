@@ -14,7 +14,7 @@
  */
 import { CombustionDataset } from '../types/combustion';
 import { computeDatasetStats } from './combustionData';
-import { runCombustionComparison } from './combustionModel';
+import { runCombustionComparison, contextPrediction } from './combustionModel';
 import { CAMPAIGNS, FLEX_TP_URL, CHALLENGE_URL } from '../data/campaigns';
 
 export interface Evidence {
@@ -203,6 +203,73 @@ export function validateCitations(text: string, known: Evidence[]): { ok: boolea
   const knownIds = new Set(known.map((e) => e.id));
   const unknownIds = [...new Set(found.filter((id) => !knownIds.has(id)))];
   return { ok: found.length > 0 && unknownIds.length === 0, unknownIds, citedIds: [...new Set(found)] };
+}
+
+/* -------- Selected-experiment context (unified manifold assistant) -------- */
+
+import { CombustionExperiment } from '../types/combustion';
+
+export function experimentEvidence(e: CombustionExperiment): Evidence {
+  const fmt = (v: number | null, unit: string) => (v === null ? 'not reported' : `${v} ${unit}`);
+  return {
+    id: 'D3',
+    text: `Record ${e.id} (facility identifier ${e.sourceIdentifier || 'n/a'}, ${e.campaign}, ${e.dateISO ?? 'date not reported'}): fuel ${e.fuel}; gravity ${e.gravity}; O2 mole fraction ${fmt(e.oxidizer.o2, '')}; diluents CO2 ${fmt(e.oxidizer.co2, '')}, He ${fmt(e.oxidizer.he, '')}; pressure ${fmt(e.pressureKPa !== null ? Math.round(e.pressureKPa * 10) / 10 : null, 'kPa')}; initial diameter ${fmt(e.initialDiameterMm, 'mm')}; extinction diameter ${fmt(e.extinctionDiameterMm, 'mm')}; burning-rate constant ${fmt(e.burningRateMm2PerS, 'mm²/s')}; burn time ${fmt(e.burnTimeS, 's')}; outcome ${e.outcome}; missing fields: ${e.missingFields.join(', ') || 'none'}. Provenance: ${e.provenance.kind}, ${e.provenance.institution}, ${e.provenance.datasetId}.`,
+    sourceTitle: `Record ${e.id} in dataset (see provenance)`,
+    sourceUrl: e.provenance.sourceUrl,
+    kind: 'dataset-derived',
+  };
+}
+
+/**
+ * Answers questions about the currently selected experiment using only
+ * its record, live dataset statistics, and the leave-one-out HRM
+ * context prediction. Empirical statements cite [D3]/[D2].
+ */
+export function answerExperimentQuestion(
+  question: string,
+  e: CombustionExperiment,
+  ds: CombustionDataset,
+): AssistantAnswer {
+  const q = question.toLowerCase();
+  const ev = [experimentEvidence(e), ...datasetEvidence(ds)];
+  const base = ev[0].text;
+
+  if (q.includes('missing') || q.includes('information')) {
+    return {
+      answer: e.missingFields.length
+        ? `For ${e.id}, the unreported measurements are: ${e.missingFields.join(', ')}. Everything else in the record is present. Full record: ${base} [D3]`
+        : `No fields are missing in the record for ${e.id} — it is one of the complete records in this dataset. Full record: ${base} [D3]`,
+      evidence: ev, citedIds: ['D3'], insufficientEvidence: false, gaps: [],
+    };
+  }
+  if (q.includes('predict') || q.includes('hrm') || q.includes('accurate')) {
+    const ctx = contextPrediction(ds, e);
+    if (ctx.observed === null) {
+      return {
+        answer: `${e.id} has no reported burning-rate constant, so there is no observed value to score a prediction against. The HRM context prediction (from the ${ctx.poolSize} other scorable tests) is ${ctx.prediction.predicted.toFixed(3)} mm²/s, but it cannot be validated for this record. [D3]`,
+        evidence: ev, citedIds: ['D3'], insufficientEvidence: true,
+        gaps: ['Burning rate unreported for this record.'],
+      };
+    }
+    const led = ctx.prediction.ledger;
+    return {
+      answer: `Leave-one-out context prediction for ${e.id}: HRM predicts K = ${ctx.prediction.predicted.toFixed(3)} mm²/s versus the observed ${ctx.observed.toFixed(3)} mm²/s (residual ${ctx.residual!.toFixed(3)}). Ledger: global mean ${led ? led.globalMean.toFixed(3) : 'n/a'} + graph coupling ${led ? led.graphCoupling.toFixed(3) : 'n/a'} + stabilization ${led ? led.stabilizationCorrection.toFixed(3) : 'n/a'}. This is a context estimate from the other ${ctx.poolSize} tests, not the held-out benchmark — use the Model Comparison overlay for the validated numbers. [D3]`,
+      evidence: ev, citedIds: ['D3'], insufficientEvidence: false, gaps: [],
+    };
+  }
+  if (q.includes('extinct') || q.includes('factor')) {
+    const stats = computeDatasetStats(ds);
+    const rate = stats.extinctionRateByFuel[e.fuel];
+    return {
+      answer: `${e.id} ended with outcome: ${e.outcome}. Across the loaded dataset, the extinction-outcome rate for ${e.fuel} is ${rate !== null ? (rate * 100).toFixed(0) + '%' : 'n/a'} [D2]. The source campaign was designed to map flammability limits and suppressant effectiveness (CO2, He, SF6) in microgravity [E1] — but which factors caused THIS test's outcome cannot be determined from a single record; that requires the comparative analysis in the Model Comparison overlay, not a claim I can ground on one row. Record: ${base} [D3]`,
+      evidence: [...ev, DOCUMENT_EVIDENCE[0]], citedIds: ['D2', 'E1', 'D3'], insufficientEvidence: false, gaps: [],
+    };
+  }
+  // Default: "what happened in this run" — describe the record faithfully.
+  return {
+    answer: `${base} [D3]`,
+    evidence: ev, citedIds: ['D3'], insufficientEvidence: false, gaps: [],
+  };
 }
 
 export function campaignSummary(): string {

@@ -1,3 +1,18 @@
+/**
+ * RETAINED FOR PROVENANCE — NOT ROUTED.
+ *
+ * This is the original standalone HRM 4.0/4.1 Planetary Manifold
+ * Telemetry application entry, preserved verbatim after the
+ * 2026-11-02 unification (see docs/UNIFIED.md). HRM FlameScope is a
+ * single unified application: the planetary manifold's visual
+ * architecture and HRM engine were fused into the combustion
+ * instrument (src/components/FlameScopeApp.tsx +
+ * src/components/CombustionCanvas.tsx), which is what src/App.tsx
+ * renders. The planetary engine modules under src/engine/ and their
+ * tests remain live; this component remains as the reference
+ * implementation of the original interface.
+ */
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   DualWorldmodelState,

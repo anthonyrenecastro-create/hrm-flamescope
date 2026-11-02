@@ -228,6 +228,8 @@ export interface ComparisonReport {
   seed: number;
   trainCount: number;
   testCount: number;
+  /** HRM predictions for the held-out set, with full ledger decompositions. */
+  hrmPredictions: ModelPrediction[];
   scores: ModelScore[];
   winner: string;
   hrmLedgerIdentityRate: number; // fraction of HRM predictions whose ledger identity holds
@@ -304,6 +306,7 @@ export function runCombustionComparison(ds: CombustionDataset, seed = 42): Compa
     seed,
     trainCount: train.length,
     testCount: test.length,
+    hrmPredictions: hrm.predictions,
     scores,
     winner,
     hrmLedgerIdentityRate: identityRate,
@@ -312,6 +315,29 @@ export function runCombustionComparison(ds: CombustionDataset, seed = 42): Compa
       ds.kind === 'measured'
         ? 'Held-out evaluation on measured NASA FLEX data. The winner is reported as computed; no advantage is assumed for the HRM model.'
         : 'Evaluation on SYNTHETIC demonstration data — results describe the teaching model, not physical reality.',
+  };
+}
+
+/**
+ * Leave-one-out context prediction for the inspector: predicts the
+ * target's K from ALL other scorable experiments in the dataset.
+ * This is contextual information for a selected node — it is NOT the
+ * benchmark (the benchmark uses the fixed held-out split above).
+ * The target's own target value is never read (leakage-safe by the
+ * same construction as predictHrmGraph).
+ */
+export function contextPrediction(
+  ds: CombustionDataset,
+  target: CombustionExperiment,
+): { prediction: ModelPrediction; observed: number | null; residual: number | null; poolSize: number } {
+  const pool = ds.experiments.filter((e) => e.id !== target.id && e.burningRateMm2PerS !== null);
+  const prediction = predictHrmGraph(pool, target);
+  const observed = target.burningRateMm2PerS;
+  return {
+    prediction,
+    observed,
+    residual: observed === null ? null : observed - prediction.predicted,
+    poolSize: pool.length,
   };
 }
 

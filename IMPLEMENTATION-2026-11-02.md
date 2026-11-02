@@ -101,3 +101,23 @@ Gravity comparison is INCONCLUSIVE by design (no bundled 1-g set).
   `server.ts` APIs (telemetry proxy, Gemini phrasing) do not run
   there; the assistant uses its offline evidence mode on Vercel,
   by design.
+
+## Unification addendum (2026-11-02)
+
+At Zebulon's direction the two-mode shell was replaced by ONE
+unified application (docs/UNIFIED.md): a Combustion Research
+Manifold canvas modeled directly on PlanetaryCanvas (rAF loop,
+props-in-refs, drag-rotate sphere, packet pulses, glow nodes,
+overlay bar + legend) whose nodes are experiments with unit-tested
+data encodings (color/size/opacity; position schematic, declared);
+left experiment browser, right Panels A/B/C/D/F, bottom playback
+timeline over derived trajectories only, and overlays for Model
+Comparison (E), Ledger (now backed by hrmPredictions in the
+comparison report), Fire Safety, Gravity, Assistant evidence, and
+Presentation — all reading one shared state. New engine pieces:
+visualEncoding.ts, contextPrediction (leave-one-out, leakage-tested
+by mutation). PlanetaryApp retained unrouted with a provenance
+header. Verification: tsc clean, **56/56 tests** (11 new in
+combustion_unified.test.ts), production build passes; benchmark
+snapshot regenerated (scores unchanged; report now embeds the 78
+ledgered HRM predictions).

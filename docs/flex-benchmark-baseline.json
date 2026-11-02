@@ -5,13 +5,795 @@
   "seed": 42,
   "trainCount": 182,
   "testCount": 78,
+  "hrmPredictions": [
+    {
+      "experimentId": "FLEX-010",
+      "predicted": 0.4670380932137646,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.04169817052249918,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-011",
+      "predicted": 0.469887287899862,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.03884897583640178,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-013",
+      "predicted": 0.46931500407006027,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0394212596662035,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-040",
+      "predicted": 0.5158267407646667,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.00709047702840297,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-041",
+      "predicted": 0.5168980403831089,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.008161776646845087,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-042",
+      "predicted": 0.5396960235799557,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.030959759843691946,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-043",
+      "predicted": 0.539526357806737,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.030790094070473135,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-044",
+      "predicted": 0.51579759590507,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.007061332168806195,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-045",
+      "predicted": 0.518513836146531,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.009777572410267272,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-046",
+      "predicted": 0.49673301021496274,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.012003253521301027,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-047",
+      "predicted": 0.5172647520483883,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.008528488312124494,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-048",
+      "predicted": 0.494128696761884,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.014607566974379798,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-049",
+      "predicted": 0.5168312335376952,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.008094969801431406,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-070",
+      "predicted": 0.49951467126951193,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.009221592466751862,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-071",
+      "predicted": 0.486775313441273,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.021960950294990778,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-072",
+      "predicted": 0.5178407198278199,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.009104456091556067,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-073",
+      "predicted": 0.4996577464520827,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.009078517284181103,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-074",
+      "predicted": 0.5167181850659847,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.007981921329720865,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-075",
+      "predicted": 0.48224934844308287,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.026486915293180906,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-076",
+      "predicted": 0.4800761138813134,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.028660149854950436,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-077",
+      "predicted": 0.4814805466887351,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.027255717047528733,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-078",
+      "predicted": 0.48363391045800463,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.025102353278259153,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-079",
+      "predicted": 0.5048168676867665,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0039193960494972755,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-120",
+      "predicted": 0.49574160082597624,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.012994662910287582,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-121",
+      "predicted": 0.4702218633934967,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.038514400342767124,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-122",
+      "predicted": 0.4723142205892289,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.036422043147034906,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-123",
+      "predicted": 0.4705281434630404,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.038208120273223414,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-124",
+      "predicted": 0.4739493101372083,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.03478695359905546,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-125",
+      "predicted": 0.4674569285927176,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.04127933514354621,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-126",
+      "predicted": 0.4697080566159651,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0390282071202987,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-127",
+      "predicted": 0.4685529784750258,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.04018328526123797,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-128",
+      "predicted": 0.4694017686178466,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.03933449511841718,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-129",
+      "predicted": 0.4866347188327885,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.02210154490347524,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-150",
+      "predicted": 0.5140273272447782,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.005291063508514332,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-151",
+      "predicted": 0.4821150635949642,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.02662120014129959,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-152",
+      "predicted": 0.48366705366146373,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.025069210074800046,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-153",
+      "predicted": 0.4853301925844293,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0234060711518345,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-154",
+      "predicted": 0.5033416689078192,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.005394594828444587,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-155",
+      "predicted": 0.5080035807699692,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0007326829662945566,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-157",
+      "predicted": 0.5150665337665432,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.006330270030279417,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-158",
+      "predicted": 0.47330190421711815,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.03543435951914566,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-159",
+      "predicted": 0.47482564772846403,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.03391061600779977,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-181",
+      "predicted": 0.5089233260153727,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.00018706227910889606,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-182",
+      "predicted": 0.5133044349064895,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.004568171170225688,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-183",
+      "predicted": 0.517464070177689,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.008727806441425278,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-184",
+      "predicted": 0.4886476408534805,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.020088622882783274,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-185",
+      "predicted": 0.4894790387328532,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.019257225003410604,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-186",
+      "predicted": 0.4912337625070081,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.017502501229255688,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-187",
+      "predicted": 0.4921857510607502,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.01655051267551359,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-188",
+      "predicted": 0.4873693947158931,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.021366869020370705,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-189",
+      "predicted": 0.4901392532334225,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.018597010502841318,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-200",
+      "predicted": 0.49122318706350915,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.017513076672754636,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-201",
+      "predicted": 0.4936337366123048,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.01510252712395901,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-202",
+      "predicted": 0.49415662675781724,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.014579636978446562,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-203",
+      "predicted": 0.4952106081979152,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0135256555383486,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-204",
+      "predicted": 0.4968478828900681,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.01188838084619572,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-206",
+      "predicted": 0.516404781382324,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.007668517646060241,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-207",
+      "predicted": 0.5163153815699869,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.007579117833723164,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-208",
+      "predicted": 0.5190681397579118,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.010331876021648007,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-209",
+      "predicted": 0.5201482424938385,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.011411978757574747,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-230",
+      "predicted": 0.5219877210580346,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.013251457321770794,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-231",
+      "predicted": 0.49625670204828487,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.012479561687978907,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-232",
+      "predicted": 0.49638566153584207,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.012350602200421718,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-233",
+      "predicted": 0.4958289187716827,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.012907344964581065,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-234",
+      "predicted": 0.5174468889642423,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.008710625227978441,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-235",
+      "predicted": 0.521646206148941,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.01290994241267715,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-236",
+      "predicted": 0.5159872417649196,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.0072509780286557635,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-237",
+      "predicted": 0.5207288957040643,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.011992631967800505,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-238",
+      "predicted": 0.5163145246805675,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.0075782609443037436,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-239",
+      "predicted": 0.5227698343514213,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.014033570615157526,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-262",
+      "predicted": 0.5080828208921427,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.0006534428441211049,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-263",
+      "predicted": 0.5102601368219182,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.001523873085654398,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-264",
+      "predicted": 0.5309672368466624,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.02223097311039853,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-265",
+      "predicted": 0.5330080265575091,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.02427176282124537,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-266",
+      "predicted": 0.5296031355392419,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.02086687180297811,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-267",
+      "predicted": 0.5331332290150403,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.024396965278776522,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-268",
+      "predicted": 0.5066290512181646,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": -0.002107212518099233,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    },
+    {
+      "experimentId": "FLEX-269",
+      "predicted": 0.5102166497081341,
+      "ledger": {
+        "globalMean": 0.5087362637362638,
+        "graphCoupling": 0.0014803859718703072,
+        "stabilizationCorrection": 0,
+        "identityHolds": true
+      }
+    }
+  ],
   "scores": [
     {
       "model": "HRM graph-coupled",
       "mae": 0.08664561523065613,
       "rmse": 0.10669004149895837,
       "n": 78,
-      "runtimeMs": 18.94826599999999,
+      "runtimeMs": 0,
       "perFuel": {
         "Methanol": {
           "mae": 0.08607193343366713,
@@ -498,7 +1280,7 @@
       "mae": 0.0981713158636236,
       "rmse": 0.12045848809187018,
       "n": 78,
-      "runtimeMs": 1.222235000000012,
+      "runtimeMs": 0,
       "perFuel": {
         "Methanol": {
           "mae": 0.10102442002442003,
@@ -985,7 +1767,7 @@
       "mae": 0.09684910752934586,
       "rmse": 0.11917834435558651,
       "n": 78,
-      "runtimeMs": 1.2757050000000163,
+      "runtimeMs": 0,
       "perFuel": {
         "Methanol": {
           "mae": 0.09422851153039835,
@@ -1472,7 +2254,7 @@
       "mae": 0.05023048045514446,
       "rmse": 0.06973140576256831,
       "n": 78,
-      "runtimeMs": 0.2535310000000095,
+      "runtimeMs": 0,
       "perFuel": {
         "Methanol": {
           "mae": 0.039071031180501446,

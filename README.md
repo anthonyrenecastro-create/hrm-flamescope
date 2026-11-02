@@ -3,6 +3,12 @@
 **Developer:** Axiom Zeta Innovations LLC
 **Built for:** NASA Space Apps Challenge 2026 — *Flame in Freefall*
 **Architecture:** adapted from HRM 4.0/4.1 Planetary Manifold Telemetry (preserved in-app as Planetary mode)
+**UNIFIED APPLICATION (2026-11-02):** FlameScope is a single fused
+application — the original planetary manifold's visual architecture
+and HRM engine carry the combustion mission in one shell with one
+shared state (see `docs/UNIFIED.md`). There is no separate planetary
+mode and no second dashboard.
+
 **Status:** independent project. **Not endorsed by NASA.** The HRM model is unvalidated — see [LIMITATIONS.md](LIMITATIONS.md).
 **Live:** https://hrm-flamescope-seven.vercel.app (Vercel, static build; the Express API routes are local-dev only, so the assistant runs in offline evidence mode there).
 

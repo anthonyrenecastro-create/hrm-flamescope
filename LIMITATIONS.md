@@ -59,3 +59,15 @@ Read this before citing any FlameScope output. Updated 2026-11-02.
   project by Axiom Zeta Innovations LLC. **Not endorsed by NASA.**
 - Nothing in FlameScope is a validated fire-safety assessment tool.
   Do not use it for operational spacecraft decisions.
+
+14. **Unified-app scope.** The planetary *standalone interface* was
+    retired in the fusion: the planetary carrier simulation (hub
+    dual-worldmodel runs, live ingestion to hubs) is not part of the
+    combustion workflow. The dual-worldmodel comparison survives as
+    HRM-vs-baseline on held-out combustion data. The original
+    component is retained unrouted for provenance.
+15. **Manifold position is schematic.** Node positions are a
+    deterministic layout, not data; color/size/opacity are the data
+    channels and are unit-tested as such. The flame glyph on the
+    selected node is a data-driven visualization of the derived
+    diameter trajectory, not observed flame imagery.
